@@ -33,10 +33,10 @@ Original PDF instructions included for readability
 
 
 ## Time Spent Estimates
-Analysis - 3 hours
-readme - 1 hour
-System setup - 10m
-Report Document - In progress
+3 hours - Analysis,
+1 hour - readme
+10m - System setup
+In progress - Report Document
 
 ## TODO
 Choose and integrate ONE external data source
