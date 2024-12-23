@@ -2,10 +2,11 @@ import csv
 import sys
 from collections import defaultdict
 
+
 def read_csv(file_path):
     products = []
     try:
-        with open(file_path, mode='r', newline='', encoding='utf-8') as file:
+        with open(file_path, mode="r", newline="", encoding="utf-8") as file:
             reader = csv.DictReader(file)
             for row in reader:
                 products.append(row)
@@ -13,6 +14,7 @@ def read_csv(file_path):
         print(f"Error: The file {file_path} was not found.")
         sys.exit(1)
     return products
+
 
 def analyze_products(products):
     category_prices = defaultdict(list)
@@ -46,7 +48,9 @@ def analyze_products(products):
         try:
             our_price = float(our_price)
         except ValueError:
-            print(f"Warning: Invalid price '{our_price}' for product '{product_name}'. Setting price to 0.")
+            print(
+                f"Warning: Invalid price '{our_price}' for product '{product_name}'. Setting price to 0."
+            )
             our_price = 0
 
         # Collect prices by category
@@ -59,13 +63,19 @@ def analyze_products(products):
         print(f"  Current Stock: {current_stock}")
 
     # Calculate average price per category and find the most expensive category
-    avg_category_prices = {category: sum(prices) / len(prices) for category, prices in category_prices.items()}
+    avg_category_prices = {
+        category: sum(prices) / len(prices)
+        for category, prices in category_prices.items()
+    }
     most_expensive_category = max(avg_category_prices, key=avg_category_prices.get)
 
     print("\nCategory Price Analysis:")
     for category, avg_price in avg_category_prices.items():
         print(f"  Category: {category}, Average Price: {avg_price:.2f} USD")
-    print(f"\nThe most expensive category is '{most_expensive_category}' with an average price of {avg_category_prices[most_expensive_category]:.2f} USD")
+    print(
+        f"\nThe most expensive category is '{most_expensive_category}' with an average price of {avg_category_prices[most_expensive_category]:.2f} USD"
+    )
+
 
 # Example usage
 if __name__ == "__main__":
