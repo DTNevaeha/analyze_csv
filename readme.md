@@ -16,6 +16,7 @@ It handles missing or malformed data for fields like current_stock
 ## Approach
 TODO
 
+
 ## Requirements
 No external API keys or credentials are required for this product. 
 Ensure Python is instaled on your system, you can download it from python.org
@@ -34,9 +35,11 @@ Original PDF instructions included for readability
 
 ## Time Spent Estimates
 3 hours - Analysis,
-1 hour - readme
-10m - System setup
-In progress - Report Document
+1 hour - readme,
+10m - System setup,
+1 hour - Report Document
+In progress - Approach
+
 
 ## TODO
 Choose and integrate ONE external data source
